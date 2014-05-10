@@ -1,4 +1,4 @@
-package ws.ale.incrowd.school.archiver;
+package ws.incrowd.ale.school.archiver;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

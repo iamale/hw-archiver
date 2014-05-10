@@ -1,4 +1,4 @@
-package ws.ale.incrowd.school.archiver;
+package ws.incrowd.ale.school.archiver;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -6,7 +6,7 @@ import junit.framework.TestSuite;
 import static org.junit.Assert.*;
 import java.util.Arrays;
 
-import ws.incrowd.ale.school.archiver.MTF;
+// import ws.incrowd.ale.school.archiver.MTF;
 
 public class MTFTest extends TestCase {
   public MTFTest(String testName) {
