@@ -5,7 +5,6 @@ import java.util.Arrays;
 class RLE {
   public static byte[] encode(byte[] data) {
     byte[][] pairs = detectParis(data);
-    System.out.println(Arrays.deepToString(pairs));
     byte[] out = new byte[2 * pairs.length];
     int iii = 0;
     for (byte[] pair : pairs) {
