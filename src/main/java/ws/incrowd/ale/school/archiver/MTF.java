@@ -3,17 +3,6 @@ package ws.incrowd.ale.school.archiver;
 import java.util.Arrays;
 
 public class MTF {
-  /**
-   * @deprecated use maven tests instead
-   */ 
-  public static void main(String[] args) {
-    MTFEncoder coder = new MTFEncoder();
-    byte[] arr = {0xd, 0xe, 0xa, 0xd, 0xb, 0xe, 0xe, 0xf};
-    for (byte m : arr) {
-      System.out.println(m + " " + coder.encode(m));
-    }
-  }
-
   public static byte[] encode(byte[] src) {
     MTFEncoder coder = new MTFEncoder();
     byte[] data = new byte[src.length];
