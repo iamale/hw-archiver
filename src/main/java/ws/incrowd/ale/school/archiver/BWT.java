@@ -5,8 +5,7 @@ import java.util.Comparator;
 
 public class BWT {
   public static byte[] encode(byte[] str, byte padding) {
-    byte[] src = new byte[str.length + 1];
-    System.arraycopy(str, 0, src, 0, str.length);
+    byte[] src = Arrays.copyOf(str, str.length + 1);
     src[str.length] = padding;
 
     byte[][] perms = permutations(src);
@@ -40,7 +39,6 @@ public class BWT {
     for (int i = 0; i < data.length; i++) {
       if (perms[i][perms[i].length - 1] == padding) {
         byte[] res = new byte[perms[i].length - 1];
-        // System.arraycopy(perms[i], 0, res, 0, res.length);
         for (int j = 0; j < res.length; j++) {
           res[j] = perms[i][j].byteValue();
         }

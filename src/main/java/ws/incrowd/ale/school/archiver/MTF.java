@@ -11,19 +11,15 @@ public class MTF {
     }
     byte[] order = coder.getOrder();
 
-    byte[] both = new byte[256 + data.length];
-    System.arraycopy(order, 0, both, 0, 256);
+    byte[] both = Arrays.copyOf(order, 256 + data.length);
     System.arraycopy(data, 0, both, 256, data.length);
 
     return both;
   }
 
   public static byte[] decode(byte[] both) {
-    byte[] order = new byte[256];
-    System.arraycopy(both, 0, order, 0, 256);
-
-    byte[] data = new byte[both.length - 256];
-    System.arraycopy(both, 256, data, 0, both.length - 256);
+    byte[] order = Arrays.copyOf(both, 256);
+    byte[] data = Arrays.copyOfRange(both, 256, both.length);
 
     MTFDecoder coder = new MTFDecoder(order);
     byte[] outta = new byte[data.length];

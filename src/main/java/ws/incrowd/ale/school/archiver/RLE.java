@@ -27,9 +27,7 @@ class RLE {
       }
     }
 
-    byte[] piece = new byte[pos];
-    System.arraycopy(data, 0, piece, 0, pos);
-    return piece;
+    return Arrays.copyOf(data, pos);
   }
 
   private static byte[][] detectPairs(byte[] data) {
@@ -60,9 +58,7 @@ class RLE {
     pairs[pos][0] = count;
     pairs[pos][1] = prev;
     pos++;
-
-    byte[][] slice = new byte[pos][2];
-    System.arraycopy(pairs, 0, slice, 0, pos);
-    return slice;
+    
+    return Arrays.copyOf(pairs, pos);
   }
 }
