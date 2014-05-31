@@ -19,10 +19,8 @@ public class RLETest extends TestCase {
     byte[] arr = {1, 1, 1, 1, 2, 3, 4};
 
     byte[] enc = RLE.encode(arr);
-    System.out.println(Arrays.toString(enc));
 
     byte[] dec = RLE.decode(enc);
-    System.out.println(Arrays.toString(dec));
 
     _assertArrayEquals(
       arr,
