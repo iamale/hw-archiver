@@ -74,8 +74,16 @@ public class MTF {
         order[i] = order[i+1];
       }
 
-      order[p] = res;
+      order[_good(p)] = res;
       return res;
+    }
+
+    private static int _good(byte p) {
+      if (p >= 0) {
+        return (int) p;
+      } else {
+        return (256 + (int) p);
+      }
     }
   }
 }
